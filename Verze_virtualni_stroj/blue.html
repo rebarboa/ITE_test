@@ -1,0 +1,68 @@
+<html>
+    <head>
+        <title>{{ title }}</title>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="./style.css" type="text/css" />        
+    </head>
+    <body bgcolor="#FFD6E5"> 
+        <div style="width: 1000px; min-height: 95%; margin: auto; background: #f5b6cd">  
+          
+          <p style="color:White; font-size:60px; margin:0px 0px 30px 30px">
+              <b>Pink team</b>
+          </p>
+          <p style="margin-left: 40px; ">
+            <a href="http://147.228.121.48:8881">
+                <button style="background:#FCC5DA; color:white; font-size:20px"><b>Home</b></button>
+            </a>
+          </p>
+          <hr style="width: 100%; margin: 0 ">
+          <p style=" text-align: center;">
+            <a href="sablona_day1.html">
+                  <button style="background:#FCC5DA; color:white; font-size:20px"><b>1 day ago</b></button>
+              </a>
+              
+              <a href="sablona_day2.html">
+                  <button style="background:#FCC5DA; color:white; font-size:20px"><b>2 days ago</b></button>
+              </a>
+              
+              <a href="sablona_day3.html">
+                  <button style="background:#FCC5DA; color:white; font-size:20px"><b>3 days ago</b></button>
+              </a>
+              
+              <a href="sablona_day4.html">
+                  <button style="background:#FCC5DA; color:white; font-size:20px"><b>4 days ago</b></button>
+              </a>
+              
+              <a href="sablona_day5.html">
+                  <button style="background:#FCC5DA; color:white; font-size:20px"><b>5 days ago</b></button>
+              </a>
+              
+              <a href="sablona_day6.html">
+                  <button style="background:#FCC5DA; color:white; font-size:20px"><b>6 days ago</b></button>
+              </a>
+          </p>
+          <hr style="width: 100%; margin: 0px 0px 30px 0px ">
+          <p style="color:White; font-size:25px; text-align: center;">
+              <b>Sensor Blue</b>
+          </p>
+          <table id="t01"; void; bgcolor="#FCC5DA"; border="1"; width="50%"; align="center">
+              <tr align="center">      
+                  <td colspan=3><b>History of temperature</b></td>
+              </tr>
+              {% for hodnota in hodnoty %}
+                    <tr>
+                        <th style="color: {{ escape(str(hodnota.alert)) }}" class="temp">{{ escape(str(hodnota.temp)) }} &ordmC</th>
+                        <th style="color: {{ escape(str(hodnota.alert)) }}" class="time">{{ escape(str(hodnota.time)) }}</th>
+                        <th style="color: {{ escape(str(hodnota.alert)) }}" class="date">{{ escape(str(hodnota.date)) }}</th>
+                    </tr>
+              {% end %}
+          </table>  
+    </div>
+    <div style="width: 1000px; min-height: 5%; margin: auto; background: #f5b6cd"> 
+       <hr style="width: 100%; margin: 0 ">
+       <p style="color:black; margin:10px 80px 0px 0px; text-align: right;">
+       
+       </p>
+    </div> 
+  </body>
+</html>
